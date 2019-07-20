@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 public class placeable : MonoBehaviour
@@ -8,13 +9,10 @@ public class placeable : MonoBehaviour
     public Rigidbody2D pivotrb;
     public GameObject pivot;
     public Rigidbody2D rb;
-
-
+    public List<Transform> anchorPoints;
 
     public void MyOnMouseDown()
     {
-        Debug.Log("happened");
-        Debug.Log(this.name);
         var mousePos = Input.mousePosition;
 
         var hinge = pivot.AddComponent<HingeJoint2D>();
@@ -28,8 +26,6 @@ public class placeable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("wat");
-        Debug.Log(this.name);
         Destroy(pivot.GetComponent<HingeJoint2D>());
     }
 

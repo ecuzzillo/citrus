@@ -23,14 +23,6 @@ public class menuItem : MonoBehaviour
         instantiatedItem.pivotrb = pivotrb;
         instantiatedItem.rb.isKinematic = false;
 
-        Debug.Log("happened 2");
         instantiatedItem.MyOnMouseDown();
-        /*var clone = Instantiate(gameObject);
-        Destroy(clone.GetComponent<menuItem>());
-        var otherbox = clone.GetComponent<box>();
-        otherbox.enabled = true;
-        otherbox.MyOnMouseDown();
-        clone.GetComponent<BoxCollider2D>().enabled = true;
-        */
     }
 }
