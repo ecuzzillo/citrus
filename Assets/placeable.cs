@@ -24,15 +24,12 @@ public class placeable : MonoBehaviour
         hinge.enabled = true;
     }
 
-    private void OnMouseDown()
+    public void detach()
     {
+        Debug.Log("SUP");
         Destroy(pivot.GetComponent<HingeJoint2D>());
     }
 
-    private void OnMouseUp()
-    {
-
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         src.Play();

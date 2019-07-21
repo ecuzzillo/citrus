@@ -23,9 +23,9 @@ public class hangingRope : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
+    private void OnMouseDown()
     {
-        Debug.Log("");
+        Debug.Log("Hallo?");
         ropeTracking = !ropeTracking;
     }
 }
